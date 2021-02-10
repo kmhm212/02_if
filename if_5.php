@@ -5,22 +5,17 @@
 // 素数でない時は「素数ではありません」
 // と出力するプログラムを書いてください。
 
-$num = 1000001;
+$num = 1;
+$flag = true;
 
-echo $num . 'は素数で';
-
-if ($num >= 2) {
-    for ($i = 2; $i <= ($num / 2) +1 ; $i++) {
-        if ($i > $num / 2) {
-            echo 'す';
-            break;
-        } elseif ($num % $i == 0) {
-            echo 'はありません';
-            break;
-        } else {
-            continue;
-        }
+for ($i = 2; $i < ($num / 2) +1 ; $i++) {
+    if ($num % $i == 0) {
+        $flag = false;
+        break;
     }
+}
+if ($flag && $num >= 2) {
+    echo $num . 'は素数です';
 } else {
-    echo 'はありません';
+    echo $num . 'は素数ではありません';
 }
