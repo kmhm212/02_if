@@ -6,10 +6,11 @@
 // と出力するプログラムを書いてください。
 
 $num = 1;
+$half = $num / 2;
 $flag = true;
 
-for ($i = 2; $i < ($num / 2) +1 ; $i++) {
-    if ($num % $i == 0) {
+for ($i = 2; $i < $half ; $i++) {
+    if ($half % $i == 0) {
         $flag = false;
         break;
     }
