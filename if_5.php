@@ -10,7 +10,7 @@ $half = $num / 2;
 $flag = true;
 
 for ($i = 2; $i < $half ; $i++) {
-    if ($half % $i == 0) {
+    if ($num % $i == 0) {
         $flag = false;
         break;
     }
